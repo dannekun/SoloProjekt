@@ -7,15 +7,16 @@ import lombok.NoArgsConstructor;
 /**
  * Created by Daniel Bojic
  * Date: 2021-05-11
- * Time: 11:47
+ * Time: 11:54
  * Project: spring-docker-demo
  * Copyright: MIT
  */
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Car {
+public class Shoe {
     String id;
     String name;
 }
