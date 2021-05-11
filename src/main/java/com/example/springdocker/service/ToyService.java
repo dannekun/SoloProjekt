@@ -1,7 +1,12 @@
 package com.example.springdocker.service;
 
+import com.example.springdocker.model.Food;
+import com.example.springdocker.model.Toy;
+import com.example.springdocker.repository.ToyRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by Daniel Bojic
@@ -14,4 +19,14 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class ToyService {
+    private final ToyRepository repository;
+
+    public List<Toy> getToys() {
+        return repository.findAll();
+    }
+
+    public void saveNewToy(Toy toy) {
+        repository.save(toy);
+    }
+
 }
