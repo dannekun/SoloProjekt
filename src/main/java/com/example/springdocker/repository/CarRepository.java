@@ -3,6 +3,7 @@ package com.example.springdocker.repository;
 import com.example.springdocker.model.Car;
 import com.example.springdocker.model.Food;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by Daniel Bojic
@@ -11,5 +12,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * Project: spring-docker-demo
  * Copyright: MIT
  */
+
+@Repository
 public interface CarRepository extends MongoRepository<Car, String> {
 }

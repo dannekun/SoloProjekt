@@ -1,17 +1,17 @@
-package com.example.springdocker.controller;
+package com.example.springdocker.service;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by Daniel Bojic
  * Date: 2021-05-11
- * Time: 11:58
+ * Time: 12:20
  * Project: spring-docker-demo
  * Copyright: MIT
  */
 
 @RequiredArgsConstructor
-@RestController
-public class ShoeController {
+@Service
+public class DrinkService {
 }
