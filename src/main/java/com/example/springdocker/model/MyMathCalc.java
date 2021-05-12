@@ -19,7 +19,9 @@ public class MyMathCalc {
         return a * b;
     }
 
-    public float divide(float a, float b){
+
+    public double divide(double a, double b){
+
         return a/b;
     }
 
