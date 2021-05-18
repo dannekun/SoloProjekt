@@ -22,6 +22,11 @@ public class MyMathCalc {
 
     public double divide(double a, double b){
 
+        if (a == 0 || b == 0){
+            throw new IndexOutOfBoundsException("Du kan inte dela med 0");
+        }
+
+
         return a/b;
     }
 
