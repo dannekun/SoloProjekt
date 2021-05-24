@@ -1,0 +1,34 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root1
+      MONGO_INITDB_ROOT_PASSWORD: password1
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root1
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password1
+    depends_on:
+      - mongo
+
+  java-app:
+    image: springboot
+    ports:
+      - 8080
+    environment:
+      DB_HOST: mongo
+      DB_PORT: 27017
+      DP_NAME: db-prod
+      SPRING_PROFILES_ACTIVE: prod
+    depends_on:
+      - mongo
